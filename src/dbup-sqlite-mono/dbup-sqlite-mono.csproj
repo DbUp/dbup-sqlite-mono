@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Description>DbUp makes it easy to deploy and upgrade SQL Server databases. This package adds SQLite-mono support.</Description>
-    <Title>DbUp SQLite Mono Support</Title>
+    <Description>DbUp makes it easy to deploy and upgrade SQL Server databases. This package adds SQLite support for Mono.</Description>
+    <Title>DbUp SQLite Support targeting Mono</Title>
     <Company>DbUp Contributors</Company>
     <Product>DbUp</Product>
     <Copyright>Copyright © DbUp Contributors 2015</Copyright>
-    <TargetFrameworks>netstandard1.3;netstandard2.0;net35;net45</TargetFrameworks>
+    <TargetFramework>net462</TargetFramework>
     <AssemblyName>dbup-sqlite-mono</AssemblyName>
     <RootNamespace>DbUp.SQLite</RootNamespace>
     <PackageId>dbup-sqlite-mono</PackageId>
@@ -18,10 +18,12 @@
 
   <ItemGroup>
     <PackageReference Include="dbup-core" Version="5.0.37"/>
+
+    <PackageReference Include="Mono.Data.Sqlite.Portable" Version="1.0.3.5" />
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Visible="false" Include="../dbup-icon.png" Pack="True" PackagePath=""/>
-  </ItemGroup>
+
 
 </Project>
