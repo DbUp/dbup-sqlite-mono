@@ -18,12 +18,13 @@
 
   <ItemGroup>
     <PackageReference Include="dbup-core" Version="5.0.37"/>
-
     <PackageReference Include="Mono.Data.Sqlite.Portable" Version="1.0.3.5" />
     <Reference Include="System" />
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
 
-
+  <ItemGroup>
+    <None Visible="false" Include="../dbup-icon.png" Pack="True" PackagePath=""/>
+  </ItemGroup>
 
 </Project>
